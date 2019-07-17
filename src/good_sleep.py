@@ -13,9 +13,9 @@ def generate_distance_matrix(image1_path, image2_path):
   (image2_w, image2_h) = image2.size
   #sanity checks
   if image1_w != image2_w:
-    pass
+    raise Exception('A largura das imagens são diferentes')
   if image1_h != image2_h:
-    pass
+    raise Exception('A altura das imagens são diferentes'.format(x))
   distance_matrix = []
   for x in range(image1_w):
     distance_matrix.append([])
